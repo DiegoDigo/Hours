@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from periodo.models import Periodo
-from linha.api.serializers import LinhaSerializer, CarroSerializer
+from rota.api.serializers import LinhaSerializer, CarroSerializer
 
 
 class PeriodoSerializer(serializers.ModelSerializer):

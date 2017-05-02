@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from linha.models import Linha, Carro
+from rota.models import Linha, Carro
 
 
 class LinhaSerializer(serializers.ModelSerializer):

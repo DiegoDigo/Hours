@@ -7,4 +7,7 @@ class MesQuerySet(models.query.QuerySet):
     def periodoAnoMes(self, mes, ano):
         return self.filter(dataAtual__month=mes, dataAtual__year=ano)
 
+    def periodoFolga(self, mes, ano):
+        return self.filter(dataAtual__month=mes, dataAtual__year=ano, folga=True)
+
 

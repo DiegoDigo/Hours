@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .serializers import LinhaSerializer, CarroSerializer
-from linha.models import Linha, Carro
+from rota.models import Linha, Carro
 
 
 class CreateLinha(generics.CreateAPIView):

@@ -20,3 +20,10 @@ class Dias(generics.ListAPIView):
     def get_queryset(self):
         return Periodo.objects.periodoAnoMes(self.kwargs['mes'],
                                              self.kwargs['ano'])
+
+
+class DiasFolga(generics.ListAPIView):
+    serializer_class = PeriodoSerializer
+
+    def get_queryset(self):
+        return Periodo.objects.periodoFolga(self.kwargs['mes'], self.kwargs['ano'])
