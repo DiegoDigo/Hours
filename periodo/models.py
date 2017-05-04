@@ -6,10 +6,10 @@ from .querys import MesQuerySet
 
 class Periodo(models.Model):
     dataAtual = models.DateField(verbose_name=u"Data Atual")
-    horario_entrada = models.TimeField(verbose_name=u"Horario de Entrada")
-    horario_saida = models.TimeField(verbose_name=u"Horario de Saida")
-    linha = models.ForeignKey(Linha, related_name="Linha")
-    carro = models.ForeignKey(Carro, related_name="Carro")
+    horario_entrada = models.TimeField(verbose_name=u"Horario de Entrada", blank=True, null=True)
+    horario_saida = models.TimeField(verbose_name=u"Horario de Saida", blank=True, null=True)
+    linha = models.ForeignKey(Linha, related_name="Linha", blank=True, null=True)
+    carro = models.ForeignKey(Carro, related_name="Carro", blank=True, null=True)
     folga = models.BooleanField(verbose_name=u"Folga", default=False)
     total_horas = models.PositiveIntegerField(verbose_name=u"Total", blank=True, null=True)
     objects = MesQuerySet.as_manager()
